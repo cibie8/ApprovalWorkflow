@@ -1,0 +1,306 @@
+{
+  "id": "root",
+  "parentId": null,
+  "type": "ROOT",
+  "name": "发起人",
+  "desc": "任何人",
+  "props": {
+    "assignedUser": [
+      {
+        "id": 6179678,
+        "name": "研发部",
+        "type": "dept",
+        "sex": null,
+        "selected": false
+      }
+    ],
+    "formPerms": [
+      {
+        "id": "field2088016068453",
+        "title": "离职原因",
+        "required": true,
+        "perm": "E"
+      },
+      {
+        "id": "field8195916079612",
+        "title": "工作是否已交接完成",
+        "required": true,
+        "perm": "E"
+      },
+      {
+        "id": "field9709116113123",
+        "title": "工作交接清单",
+        "required": false,
+        "perm": "E"
+      },
+      {
+        "id": "field2881016127102",
+        "title": "物品是否已归还",
+        "required": true,
+        "perm": "E"
+      },
+      {
+        "id": "field5470216191522",
+        "title": "物品归还清单",
+        "required": false,
+        "perm": "E"
+      }
+    ]
+  },
+  "children": {
+    "id": "node_162160564081",
+    "parentId": "root",
+    "props": {
+      "assignedType": "ASSIGN_USER",
+      "mode": "AND",
+      "sign": false,
+      "nobody": {
+        "handler": "TO_PASS",
+        "assignedUser": []
+      },
+      "timeLimit": {
+        "timeout": {
+          "unit": "H",
+          "value": 0
+        },
+        "handler": {
+          "type": "REFUSE",
+          "notify": {
+            "once": true,
+            "hour": 1
+          }
+        }
+      },
+      "assignedUser": [
+        {
+          "id": 100002,
+          "name": "Java2号",
+          "type": "user",
+          "sex": false,
+          "selected": false
+        }
+      ],
+      "formPerms": [
+        {
+          "id": "field2088016068453",
+          "title": "离职原因",
+          "required": true,
+          "perm": "R"
+        },
+        {
+          "id": "field8195916079612",
+          "title": "工作是否已交接完成",
+          "required": true,
+          "perm": "R"
+        },
+        {
+          "id": "field9709116113123",
+          "title": "工作交接清单",
+          "required": true,
+          "perm": "R"
+        },
+        {
+          "id": "field2881016127102",
+          "title": "物品是否已归还",
+          "required": true,
+          "perm": "R"
+        },
+        {
+          "id": "field5470216191522",
+          "title": "物品归还清单",
+          "required": true,
+          "perm": "R"
+        }
+      ],
+      "selfSelect": {
+        "multiple": false
+      },
+      "leaderTop": {
+        "endCondition": "TOP",
+        "endLevel": 1
+      },
+      "leader": {
+        "level": 1
+      },
+      "role": [],
+      "refuse": {
+        "type": "TO_END",
+        "target": ""
+      },
+      "formUser": ""
+    },
+    "type": "APPROVAL",
+    "name": "审批人",
+    "children": {
+      "id": "node_162175739077",
+      "parentId": "node_162160564081",
+      "props": {
+        "assignedType": "ASSIGN_USER",
+        "mode": "AND",
+        "sign": false,
+        "nobody": {
+          "handler": "TO_PASS",
+          "assignedUser": []
+        },
+        "timeLimit": {
+          "timeout": {
+            "unit": "H",
+            "value": 0
+          },
+          "handler": {
+            "type": "REFUSE",
+            "notify": {
+              "once": true,
+              "hour": 1
+            }
+          }
+        },
+        "assignedUser": [
+          {
+            "id": 100003,
+            "name": "Java3号",
+            "type": "user",
+            "sex": false,
+            "selected": false
+          }
+        ],
+        "formPerms": [
+          {
+            "id": "field2088016068453",
+            "title": "离职原因",
+            "required": true,
+            "perm": "R"
+          },
+          {
+            "id": "field8195916079612",
+            "title": "工作是否已交接完成",
+            "required": true,
+            "perm": "R"
+          },
+          {
+            "id": "field9709116113123",
+            "title": "工作交接清单",
+            "required": true,
+            "perm": "R"
+          },
+          {
+            "id": "field2881016127102",
+            "title": "物品是否已归还",
+            "required": true,
+            "perm": "R"
+          },
+          {
+            "id": "field5470216191522",
+            "title": "物品归还清单",
+            "required": true,
+            "perm": "R"
+          }
+        ],
+        "selfSelect": {
+          "multiple": false
+        },
+        "leaderTop": {
+          "endCondition": "TOP",
+          "endLevel": 1
+        },
+        "leader": {
+          "level": 1
+        },
+        "role": [],
+        "refuse": {
+          "type": "TO_NODE",
+          "target": "node_162160564081"
+        },
+        "formUser": ""
+      },
+      "type": "APPROVAL",
+      "name": "审批人",
+      "children": {
+        "id": "node_162203366260",
+        "parentId": "node_162175739077",
+        "props": {
+          "assignedType": "ASSIGN_USER",
+          "mode": "AND",
+          "sign": false,
+          "nobody": {
+            "handler": "TO_PASS",
+            "assignedUser": []
+          },
+          "timeLimit": {
+            "timeout": {
+              "unit": "H",
+              "value": 0
+            },
+            "handler": {
+              "type": "REFUSE",
+              "notify": {
+                "once": true,
+                "hour": 1
+              }
+            }
+          },
+          "assignedUser": [
+            {
+              "id": 100004,
+              "name": "Java4号",
+              "type": "user",
+              "sex": false,
+              "selected": false
+            }
+          ],
+          "formPerms": [
+            {
+              "id": "field2088016068453",
+              "title": "离职原因",
+              "required": true,
+              "perm": "R"
+            },
+            {
+              "id": "field8195916079612",
+              "title": "工作是否已交接完成",
+              "required": true,
+              "perm": "R"
+            },
+            {
+              "id": "field9709116113123",
+              "title": "工作交接清单",
+              "required": true,
+              "perm": "R"
+            },
+            {
+              "id": "field2881016127102",
+              "title": "物品是否已归还",
+              "required": true,
+              "perm": "R"
+            },
+            {
+              "id": "field5470216191522",
+              "title": "物品归还清单",
+              "required": true,
+              "perm": "R"
+            }
+          ],
+          "selfSelect": {
+            "multiple": false
+          },
+          "leaderTop": {
+            "endCondition": "TOP",
+            "endLevel": 1
+          },
+          "leader": {
+            "level": 1
+          },
+          "role": [],
+          "refuse": {
+            "type": "TO_END",
+            "target": ""
+          },
+          "formUser": ""
+        },
+        "type": "TASK",
+        "name": "办理人",
+        "children": {}
+      }
+    }
+  }
+}
